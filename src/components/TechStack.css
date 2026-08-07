@@ -1,0 +1,91 @@
+.ts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.ts-title {
+  margin-bottom: 0;
+}
+
+.ts-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ts-tab {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ts-tab:hover {
+  color: var(--text-primary);
+}
+
+.ts-tab.active {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.ts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.ts-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: default;
+}
+
+.ts-pill:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.ts-icon {
+  color: inherit;
+  opacity: 0.8;
+}
+
+.ts-real-logo {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+/* Invert black SVGs to white in default dark mode */
+.ts-invert-dark {
+  filter: invert(1);
+}
+
+/* Revert back to black in light mode */
+[data-theme='light'] .ts-invert-dark {
+  filter: none;
+}
+
+/* Swap opencode logo source for light mode */
+[data-theme='light'] .opencode-logo {
+  content: url('/opencode-light.svg');
+}

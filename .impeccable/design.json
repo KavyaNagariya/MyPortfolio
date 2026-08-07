@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-07T08:03:00.000Z",
+  "title": "Design System: Kavya Nagariya Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "accent": { "role": "primary", "displayName": "Subtle Accent", "canonical": "#333333", "tonalRamp": ["#111111", "#222222", "#333333", "#444444", "#555555", "#777777", "#999999", "#cccccc"] },
+      "neutral-bg": { "role": "neutral", "displayName": "Deep Background", "canonical": "#0d0d0d", "tonalRamp": ["#000000", "#0d0d0d", "#1a1a1a", "#262626", "#333333", "#4d4d4d", "#808080", "#b3b3b3"] },
+      "neutral-text": { "role": "neutral", "displayName": "Primary Text", "canonical": "#f2f2f2", "tonalRamp": ["#333333", "#666666", "#999999", "#cccccc", "#e6e6e6", "#f2f2f2", "#fafafa", "#ffffff"] },
+      "neutral-muted": { "role": "neutral", "displayName": "Muted Text", "canonical": "#999999", "tonalRamp": ["#1a1a1a", "#333333", "#4d4d4d", "#666666", "#808080", "#999999", "#b3b3b3", "#cccccc"] },
+      "neutral-border": { "role": "neutral", "displayName": "Border & Divider", "canonical": "#262626", "tonalRamp": ["#0d0d0d", "#1a1a1a", "#262626", "#333333", "#404040", "#4d4d4d", "#666666", "#808080"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display Serif", "purpose": "Hero headlines and section titles." },
+      "body": { "displayName": "Body Sans", "purpose": "All descriptive text, bio points, and component labels." }
+    }
+  },
+  "components": [
+    {
+      "name": "Contact Pill",
+      "kind": "button",
+      "refersTo": "pill-link",
+      "description": "Used for external social links and contact points.",
+      "html": "<button class=\"ds-pill\"><span><svg viewBox=\"0 0 24 24\" width=\"16\" height=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"><path d=\"M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22\"></path></svg></span> GitHub ↗</button>",
+      "css": ".ds-pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid #262626; border-radius: 9999px; background-color: transparent; color: #999999; font-size: 14px; transition: all 0.2s ease; cursor: pointer; font-family: 'Inter', sans-serif; } .ds-pill:hover, .ds-pill:focus-visible { background-color: #333333; color: #f2f2f2; }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "project-card",
+      "description": "Used for displaying projects.",
+      "html": "<div class=\"ds-project-card\"><div class=\"ds-project-placeholder\"></div><div class=\"ds-project-info\"><h3>Project Name</h3><p>A short description.</p></div></div>",
+      "css": ".ds-project-card { display: block; border-radius: 8px; overflow: hidden; border: 1px solid #262626; transition: transform 0.2s, border-color 0.2s; cursor: pointer; font-family: 'Inter', sans-serif; background: #0d0d0d; } .ds-project-card:hover { transform: translateY(-4px); border-color: #999999; } .ds-project-placeholder { width: 100%; height: 160px; background: linear-gradient(45deg, #1a1a1a, #2a2a2a); } .ds-project-info { padding: 16px; } .ds-project-info h3 { font-size: 1.1rem; margin-bottom: 6px; color: #f2f2f2; font-family: 'Playfair Display', serif; } .ds-project-info p { font-size: 0.9rem; color: #999999; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Developer's Ledger",
+    "overview": "This portfolio adopts a refined minimalism that uses darkness to strip away distractions and bring total focus to the work. It is a pragmatic, build-first environment that logs work like a ledger. It avoids flashy ornamentation in favor of scannability and structural clarity.",
+    "keyCharacteristics": [
+      "High-contrast, dark-mode first design",
+      "Strict monochromatic palette with subtle gray accents",
+      "High-legibility sans-serif body text paired with a classic serif display font",
+      "Utilitarian UI components that stay out of the user's way"
+    ],
+    "rules": [
+      { "name": "The Monochrome Doctrine Rule", "body": "Do not introduce saturated color. Visual hierarchy must be established entirely through typography, spacing, and contrast.", "section": "colors" },
+      { "name": "The Flat-By-Default Rule", "body": "Surfaces are perfectly flat. Do not use box-shadow or gradients to simulate 3D depth.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use spacing and typography to separate content.",
+      "Do maintain the strict monochromatic palette."
+    ],
+    "donts": [
+      "Don't add shadows or glowing effects.",
+      "Don't introduce new hues or colored accents unless specifically branding a third-party logo."
+    ]
+  }
+}

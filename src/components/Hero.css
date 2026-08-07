@@ -1,0 +1,143 @@
+.hero {
+  margin-bottom: 3rem;
+  border-bottom: var(--border-style);
+  padding-bottom: 2rem;
+}
+
+.hero-cover {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  background-color: var(--bg-color);
+  position: relative;
+  perspective: 1000px;
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-main,
+.avatar-swap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.avatar-main {
+  transform: rotateY(0deg);
+}
+
+.avatar-swap {
+  transform: rotateY(0deg);
+}
+
+.avatar-main.hidden {
+  transform: rotateY(-180deg);
+}
+
+.avatar-swap.hidden {
+  transform: rotateY(180deg);
+}
+
+.avatar-swap-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.avatar-swap-btn:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.hero-info {
+  flex: 1;
+  min-width: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.hero-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.hero-name {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+@keyframes slideUpFadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fading-text {
+  animation: slideUpFadeIn 0.5s ease-out forwards;
+}
+
+.hero-role {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.hero-location {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
